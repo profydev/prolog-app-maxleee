@@ -50,6 +50,24 @@ describe("Sidebar Navigation", () => {
       // check that text is not rendered
       cy.get("nav").contains("Issues").should("not.exist");
     });
+
+    //check for correct logo size
+    it("is displaying the correct logo when viewport is changed while navigation is collapsed", () => {
+      //collapse navigation
+      cy.get("nav").contains("Collapse").click();
+
+      //check that small logo is shown
+      cy.get("img[src='/icons/logo-small.svg'").should("be.visible");
+      //check that large logo is hidden
+      cy.get("img[src='/icons/logo-large.svg'").should("not.be.visible");
+
+      //switch to landscape/small
+      cy.viewport(900, 1025);
+      //check that small logo is hidden
+      cy.get("img[src='/icons/logo-small.svg'").should("not.be.visible");
+      //check that large logo is shown
+      cy.get("img[src='/icons/logo-large.svg'").should("be.visible");
+    });
   });
 
   context("mobile resolution", () => {
