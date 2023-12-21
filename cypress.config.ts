@@ -1,4 +1,5 @@
 import { defineConfig } from "cypress";
+import { version } from "./package.json";
 
 export default defineConfig({
   retries: {
@@ -10,5 +11,8 @@ export default defineConfig({
     setupNodeEvents() {
       // implement node event listeners here
     },
+  },
+  env: {
+    version,
   },
 });
