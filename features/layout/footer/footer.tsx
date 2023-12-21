@@ -1,9 +1,13 @@
 import styles from "./footer.module.scss";
+import getConfig from "next/config";
 
 export function Footer() {
+  const { publicRuntimeConfig } = getConfig();
+  const version = publicRuntimeConfig?.version;
+
   return (
     <footer className={styles.footer}>
-      <p className={styles.version}>Version: 14.5.1</p>
+      <p className={styles.version}>Version: {version}</p>
       <div className={styles.footerLinksWrapper}>
         <a href="#" className={styles.footerLink}>
           Docs
