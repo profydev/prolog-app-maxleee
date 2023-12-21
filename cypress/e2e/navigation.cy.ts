@@ -57,16 +57,20 @@ describe("Sidebar Navigation", () => {
       cy.get("nav").contains("Collapse").click();
 
       //check that small logo is shown
-      cy.get("img[src='/icons/logo-small.svg'").should("be.visible");
+      cy.get("header img[src='/icons/logo-small.svg']").should("be.visible");
       //check that large logo is hidden
-      cy.get("img[src='/icons/logo-large.svg'").should("not.be.visible");
+      cy.get("header img[src='/icons/logo-large.svg']").should(
+        "not.be.visible",
+      );
 
       //switch to landscape/small
       cy.viewport(900, 1025);
       //check that small logo is hidden
-      cy.get("img[src='/icons/logo-small.svg'").should("not.be.visible");
+      cy.get("header img[src='/icons/logo-small.svg']").should(
+        "not.be.visible",
+      );
       //check that large logo is shown
-      cy.get("img[src='/icons/logo-large.svg'").should("be.visible");
+      cy.get("header img[src='/icons/logo-large.svg']").should("be.visible");
     });
   });
 

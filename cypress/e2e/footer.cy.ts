@@ -23,8 +23,6 @@ describe("Footer", () => {
   //check for logo
   it("is displaying the correct logo when viewport is changed while navigation is collapsed", () => {
     //collapse navigation
-    cy.get("footer")
-      .get("img[src='/icons/logo-small.svg'")
-      .should("be.visible");
+    cy.get("footer img[src='/icons/logo-small.svg']").should("be.visible");
   });
 });
