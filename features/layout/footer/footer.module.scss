@@ -17,7 +17,6 @@
     min-height: misc.$footer-height;
     padding: space.$s3 space.$s8;
     flex-direction: row;
-    justify-content: space-between;
   }
 }
 
@@ -25,6 +24,7 @@
   color: color.$gray-500;
   margin-block: 0;
   order: 3;
+  flex: 1;
 
   @media (min-width: breakpoint.$desktop) {
     order: unset;
@@ -33,20 +33,35 @@
 
 .footerLinksWrapper {
   display: flex;
+  justify-self: center;
   gap: space.$s6;
+  margin: 0;
+  padding: 0;
 
-  .footerLink {
-    color: color.$gray-500;
-    text-decoration: none;
-    font: font.$text-md-regular;
-    transition: color 0.2s ease;
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-    &:hover {
-      color: color.$gray-600;
+    .footerLink {
+      color: color.$gray-500;
+      text-decoration: none;
+      font: font.$text-md-regular;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: color.$gray-600;
+      }
     }
   }
 }
 
 .logo {
-  height: space.$s8;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+
+  img {
+    height: space.$s8;
+  }
 }
