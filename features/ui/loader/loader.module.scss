@@ -1,3 +1,24 @@
-.loader {
+@use "@styles/misc";
+@use "@styles/space";
+
+.wrapper {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-block: space.$s24;
+}
+
+.loader {
+  animation: loader infinite 1.5s linear;
+}
+
+@keyframes loader {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
 }
