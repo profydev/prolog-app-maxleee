@@ -1,6 +1,25 @@
 import mockProjects from "../fixtures/projects.json";
 import { ProjectStatus } from "@api/projects.types";
 
+describe("Project List Loading", () => {
+  it("displays a loading spinner", () => {
+    //intercept request and add delay
+    cy.intercept("GET", "https://prolog-api.profy.dev/project", async (req) => {
+      req.reply({
+        fixture: "projects.json",
+        delay: 500,
+      });
+    }).as("getProjects");
+
+    // open projects page and confirm loader is visible
+    cy.visit("http://localhost:3000/dashboard");
+    cy.get("[data-test-id='loader']").should("be.visible");
+    //wait for request and confirm loader does not exist
+    cy.wait("@getProjects");
+    cy.get("[data-test-id='loader']").should("not.exist");
+  });
+});
+
 describe("Project List", () => {
   beforeEach(() => {
     // setup request mock
