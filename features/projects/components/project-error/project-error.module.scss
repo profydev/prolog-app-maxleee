@@ -1,0 +1,16 @@
+@use "@styles/color";
+@use "@styles/font";
+@use "@styles/space";
+
+.errorWrapper {
+  background-color: color.$error-25;
+  color: color.$error-700;
+  border-radius: space.$s2;
+  padding: space.$s4;
+  border: 1px solid color.$error-300;
+}
+
+.errorMessage {
+  margin: 0;
+  font: font.$text-sm-medium;
+}
