@@ -1,0 +1,18 @@
+@use "@styles/color";
+@use "@styles/font";
+@use "@styles/space";
+@use "@styles/shadow";
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: space.$s2;
+  border-radius: space.$s2;
+  padding: space.$s2 0.875rem;
+  border: 1px solid color.$primary-600;
+  background-color: color.$primary-600;
+  box-shadow: shadow.$xs;
+  color: color.$white;
+  font: font.$text-sm-medium;
+}
