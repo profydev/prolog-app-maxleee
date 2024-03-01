@@ -1,3 +1,3 @@
 export * from "./badge";
-export * from "./button";
+export * from "./unstyled-button";
 export * from "./loader";
