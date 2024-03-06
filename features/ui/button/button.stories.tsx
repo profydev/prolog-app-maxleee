@@ -4,18 +4,21 @@ import "@fontsource/inter/400.css";
 import "@fontsource/inter/500.css";
 import "@fontsource/inter/600.css";
 
-import { Button, ButtonSize } from "./button";
+import { Button, ButtonSize, ButtonColor } from "./button";
 
 const meta: Meta<typeof Button> = {
   title: "UI/Button",
   component: Button,
+  argTypes: {
+    color: { control: "radio", options: ButtonColor },
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
-  args: { children: "Button CTA" },
+  args: { children: "Button CTA", color: ButtonColor.Primary },
 };
 
 export const Small: Story = {

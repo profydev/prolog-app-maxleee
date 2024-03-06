@@ -9,10 +9,7 @@
   align-items: center;
   gap: space.$s2;
   border-radius: space.$s2;
-  border: 1px solid color.$primary-600;
-  background: color.$primary-600;
   box-shadow: shadow.$xs;
-  color: color.$white;
 }
 
 .sm {
@@ -33,4 +30,46 @@
 .xl {
   padding: space.$s3 space.$s5;
   font: font.$text-md-medium;
+}
+
+.primary {
+  background: color.$primary-600;
+  color: color.$white;
+  border: 1px solid color.$primary-600;
+}
+
+.secondary {
+  background: color.$primary-50;
+  color: color.$primary-700;
+  border: 1px solid color.$primary-50;
+}
+
+.gray {
+  background: color.$white;
+  color: color.$gray-300;
+  border: 1px solid color.$gray-700;
+}
+
+.empty {
+  background: color.$white;
+  color: color.$primary-700;
+  border: 1px solid color.$white;
+}
+
+.emptyGray {
+  background: color.$white;
+  color: color.$gray-500;
+  border: 1px solid color.$white;
+}
+
+.error {
+  background: color.$error-600;
+  color: color.$white;
+  border: 1px solid color.$error-600;
+}
+
+.emptyError {
+  background: color.$white;
+  color: color.$error-700;
+  border: 1px solid color.$white;
 }
