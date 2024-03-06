@@ -1,5 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+
 import { Button, ButtonSize } from "./button";
 
 const meta: Meta<typeof Button> = {
