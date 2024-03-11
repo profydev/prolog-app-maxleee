@@ -18,7 +18,7 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
-  args: { children: "Button CTA", color: ButtonColor.Primary },
+  args: { children: "Button CTA", color: ButtonColor.Primary, disabled: false },
 };
 
 export const Small: Story = {

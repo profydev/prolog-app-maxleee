@@ -10,6 +10,7 @@
   gap: space.$s2;
   border-radius: space.$s2;
   box-shadow: shadow.$xs;
+  transition: all 0.2s;
 }
 
 .sm {
@@ -36,40 +37,144 @@
   background: color.$primary-600;
   color: color.$white;
   border: 1px solid color.$primary-600;
+
+  &:hover {
+    background: color.$primary-700;
+    border-color: color.$primary-700;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 4px rgb(244 235 255 / 100%);
+  }
+
+  &:disabled {
+    background: color.$primary-200;
+    border: 1px solid color.$primary-200;
+  }
 }
 
 .secondary {
   background: color.$primary-50;
   color: color.$primary-700;
   border: 1px solid color.$primary-50;
+
+  &:hover {
+    background: color.$primary-100;
+    border-color: color.$primary-100;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 4px rgb(244 235 255 / 100%);
+  }
+
+  &:disabled {
+    background: color.$primary-25;
+    border: 1px solid color.$primary-25;
+    color: color.$primary-300;
+  }
 }
 
 .gray {
   background: color.$white;
-  color: color.$gray-300;
-  border: 1px solid color.$gray-700;
+  color: color.$gray-700;
+  border: 1px solid color.$gray-300;
+
+  &:hover {
+    background: color.$gray-50;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 4px rgb(242 244 247 / 100%);
+  }
+
+  &:disabled {
+    background: color.$primary-25;
+    border: 1px solid color.$gray-200;
+    color: color.$gray-300;
+  }
 }
 
 .empty {
   background: color.$white;
   color: color.$primary-700;
   border: 1px solid color.$white;
+  box-shadow: none;
+
+  &:hover {
+    background: color.$primary-50;
+    border-color: color.$primary-50;
+  }
+
+  &:focus {
+    background: color.$white;
+    border-color: color.$white;
+  }
+
+  &:disabled {
+    color: color.$gray-300;
+  }
 }
 
 .emptyGray {
   background: color.$white;
   color: color.$gray-500;
   border: 1px solid color.$white;
+  box-shadow: none;
+
+  &:hover {
+    background: color.$gray-50;
+    border-color: color.$gray-50;
+    color: color.$gray-600;
+  }
+
+  &:focus {
+    background: color.$white;
+    border-color: color.$white;
+    color: color.$gray-500;
+  }
+
+  &:disabled {
+    color: color.$gray-300;
+  }
 }
 
 .error {
   background: color.$error-600;
   color: color.$white;
   border: 1px solid color.$error-600;
+
+  &:hover {
+    background: color.$error-700;
+    border-color: color.$error-700;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 4px rgb(254 228 226 / 100%);
+  }
+
+  &:disabled {
+    background: color.$error-200;
+    border-color: color.$error-200;
+  }
 }
 
 .emptyError {
   background: color.$white;
   color: color.$error-700;
   border: 1px solid color.$white;
+  box-shadow: none;
+
+  &:hover {
+    background: color.$error-50;
+    border-color: color.$error-50;
+  }
+
+  &:focus {
+    background: color.$white;
+    border-color: color.$white;
+  }
+
+  &:disabled {
+    color: color.$error-300;
+  }
 }
