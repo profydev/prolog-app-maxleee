@@ -13,20 +13,24 @@ export enum ButtonColor {
   Primary = "primary",
   Secondary = "secondary",
   Gray = "gray",
-  Empty = "empty",
-  EmptyGray = "emptyGray",
   Error = "error",
-  EmptyError = "emptyError",
+}
+
+export enum ButtonVariant {
+  Default = "default",
+  Empty = "empty",
 }
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   size?: ButtonSize;
   color?: ButtonColor;
+  variant?: ButtonVariant;
 };
 export function Button({
   className,
   size = ButtonSize.Medium,
   color = ButtonColor.Primary,
+  variant = ButtonVariant.Default,
   ...props
 }: ButtonProps) {
   return (
@@ -35,6 +39,7 @@ export function Button({
       className={classNames(
         styles[size],
         styles[color],
+        styles[variant],
         className,
         styles.button,
       )}

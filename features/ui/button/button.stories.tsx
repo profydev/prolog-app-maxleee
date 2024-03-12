@@ -4,13 +4,14 @@ import "@fontsource/inter/400.css";
 import "@fontsource/inter/500.css";
 import "@fontsource/inter/600.css";
 
-import { Button, ButtonSize, ButtonColor } from "./button";
+import { Button, ButtonSize, ButtonColor, ButtonVariant } from "./button";
 
 const meta: Meta<typeof Button> = {
   title: "UI/Button",
   component: Button,
   argTypes: {
-    color: { control: "radio", options: ButtonColor },
+    color: { control: "select", options: ButtonColor },
+    variant: { control: "select", options: ButtonVariant },
   },
 };
 
@@ -18,7 +19,12 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
-  args: { children: "Button CTA", color: ButtonColor.Primary, disabled: false },
+  args: {
+    children: "Button CTA",
+    color: ButtonColor.Primary,
+    disabled: false,
+    variant: ButtonVariant.Default,
+  },
 };
 
 export const Small: Story = {
