@@ -5,6 +5,7 @@ import "@fontsource/inter/500.css";
 import "@fontsource/inter/600.css";
 
 import { Button, ButtonSize, ButtonColor, ButtonVariant } from "./button";
+import { ButtonIcon } from "./button-icon";
 
 const meta: Meta<typeof Button> = {
   title: "UI/Button",
@@ -41,4 +42,38 @@ export const Large: Story = {
 
 export const XLarge: Story = {
   args: { ...Default.args, size: ButtonSize.XLarge },
+};
+
+export const IconLeading: Story = {
+  args: {
+    ...Default.args,
+    children: (
+      <>
+        <ButtonIcon src="/icons/message.svg" />
+        Button CTA
+      </>
+    ),
+  },
+};
+export const IconTrailing: Story = {
+  args: {
+    ...Default.args,
+    children: (
+      <>
+        Button CTA
+        <ButtonIcon src="/icons/message.svg" />
+      </>
+    ),
+  },
+};
+export const IconOnly: Story = {
+  args: {
+    ...Default.args,
+    variant: ButtonVariant.IconOnly,
+    children: (
+      <>
+        <ButtonIcon src="/icons/message.svg" />
+      </>
+    ),
+  },
 };
